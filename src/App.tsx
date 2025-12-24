@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import './Todo.css'
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
     <>
        <h1>Playground</h1>
        <h2>Todo List</h2>
+       <div className="card">
+        <div className="entryControls">
        <input 
           placeholder="Add a todo" 
           value={text}
@@ -28,15 +31,11 @@ function App() {
       <button onClick={
         () => {
           if (text.trim()) {
-            setList([...list, text]);
+            setList([...list, text.trim()]);
           }
         }
       }>Add To List</button>
-      <button onClick={
-        () => {
-          console.log(list)
-        }
-      }>Console Test</button>
+      </div>
       <ul>
         {list.map((item, index) => (
           <li key={index}>{item}
@@ -50,6 +49,7 @@ function App() {
           
         ))}
       </ul>
+      </div>
     </>
   )
 }
