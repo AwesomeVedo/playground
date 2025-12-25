@@ -19,12 +19,31 @@
     border-top: 1px solid #c1c1c1;
 }
 
-.card ul li button {
+button {
     margin-left: 15px;
+    background-color: var(--black);
+    border: 1px solid white;
+}
+
+.deleteItem {
+    background-color: var(--red);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .entryControls {
     display: flex;
     justify-content: space-between;
     padding: 15px;
+    background-color: var(--black);
+}
+
+input {
+    height: 36px;
+    padding: 6px 10px;
+    line-height: 1.2;
+    background: #dadada;
+    border: 1px solid #acacac;
+    border-radius: 5px;
+    color: var(--black);
 }

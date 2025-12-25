@@ -12,7 +12,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --white: white;
+  --black: black;
   --whitesmoke: whitesmoke;
+  --red: #c50101;
+  --green: #2d9903;
 }
 
 a {

@@ -31,20 +31,23 @@ function App() {
       <button onClick={
         () => {
           if (text.trim()) {
-            setList([...list, text.trim()]);
+            setList([...list, text.trim()])
+            setText("")
           }
         }
-      }>Add To List</button>
+      }>Add</button>
       </div>
       <ul>
         {list.map((item, index) => (
           <li key={index}>{item}
-          <button onClick={
-            () => {
-              const editedList = list.filter((_, i) => i !== index)
-              setList(editedList)
-            }
-          }>Delete</button>
+          <button 
+            className="deleteItem"
+            onClick={
+              () => {
+                const editedList = list.filter((_, i) => i !== index)
+                setList(editedList)
+              }
+            }>X</button>
           </li>
           
         ))}
